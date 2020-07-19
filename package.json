@@ -1,0 +1,52 @@
+{
+  "name": "ptp_recruiter_app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@types/react": "^16.8.6",
+    "axios": "^0.19.2",
+    "clsx": "^1.1.1",
+    "es6-promise": "4.1.1",
+    "formik": "^2.1.4",
+    "next": "^9.4.4",
+    "next-redux-saga": "4.0.0",
+    "next-redux-wrapper": "2.0.0",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-redux": "5.0.7",
+    "redux": "4.0.1",
+    "redux-saga": "1.0.1",
+    "sass": "^1.26.8",
+    "yup": "^0.29.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.9",
+    "prettier": "^2.0.5",
+    "redux-devtools-extension": "2.13.2"
+  },
+  "scripts": {
+    "eslint": "eslint ./{components,containers}/*",
+    "prettier": "prettier --write ./{components,containers}/*",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
